@@ -32,7 +32,6 @@ const AddPath = () => {
 
   let data = [""],
     occur = "",
-    links = [],
     demoarr = [];
 
   names.map((name) => (occur = occur + " " + name.name1 + " " + name.name2));
@@ -41,16 +40,6 @@ const AddPath = () => {
   data = removeDuplicates(demoarr);
   console.log(data);
   console.log(names);
-
-  useEffect(() => {
-    names.map((name) =>
-      links.push([
-        removeDuplicates(demoarr).indexOf(name.name1),
-        removeDuplicates(demoarr).indexOf(name.name2),
-      ])
-    );
-    console.log(links);
-  }, [names]);
 
   return (
     <div className="">
@@ -87,7 +76,7 @@ const AddPath = () => {
           </button>
         </div>
       </Box>
-      <SelectLink data={data} />
+      <SelectLink data={data} names={names} />
     </div>
   );
 };

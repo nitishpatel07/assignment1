@@ -6,7 +6,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import ShowLink from "./ShowLink";
 
-const SelectLink = ({ data }) => {
+const SelectLink = ({ data, names }) => {
   console.log(data);
   const [source, setSource] = React.useState("");
   const [destination, setDestination] = React.useState("");
@@ -62,10 +62,13 @@ const SelectLink = ({ data }) => {
           </Select>
         </FormControl>
       </Box>
-      <button className="" onClick={handleSubmit}>
-        SHOW CONNECTION
-      </button>
-      <ShowLink source={source} destination={destination} />
+
+      <ShowLink
+        source={source}
+        destination={destination}
+        names={names}
+        data={data}
+      />
     </div>
   );
 };
