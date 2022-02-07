@@ -18,10 +18,10 @@ const SelectLink = ({ data, names }) => {
     setDestination(event.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault(e);
-    // console.log(source, destination);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault(e);
+  //   // console.log(source, destination);
+  // };
 
   return (
     <div className="flex flex-col items-center gap-5 mt-12">
