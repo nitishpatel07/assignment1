@@ -7,11 +7,11 @@
 The app basically consists of 3 parts:
 
 Step-1: Enter name of two friends
-
 Step-2: Select the name of friends between whom you want to find a link
-
 Step-3: The link is finally displayed
 
 ### `Screenshot`
+
+Results are shown as per the test cases in problem statement
 ![Screenshot (60)](https://user-images.githubusercontent.com/65459610/152848646-09768985-e8c6-4110-aaaf-94eb12e1c2d5.png)
 
