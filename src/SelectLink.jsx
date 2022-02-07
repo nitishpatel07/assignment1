@@ -1,5 +1,4 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -7,7 +6,7 @@ import Select from "@mui/material/Select";
 import ShowLink from "./ShowLink";
 
 const SelectLink = ({ data, names }) => {
-  console.log(data);
+  // console.log(data);
   const [source, setSource] = React.useState("");
   const [destination, setDestination] = React.useState("");
 
@@ -21,7 +20,7 @@ const SelectLink = ({ data, names }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault(e);
-    console.log(source, destination);
+    // console.log(source, destination);
   };
 
   return (

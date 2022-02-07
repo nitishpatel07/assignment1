@@ -11,6 +11,7 @@ const AddPath = () => {
   const [names, setNames] = useState([]);
 
   const { name1, name2 } = state;
+  const [show, setShow] = useState(false);
 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
@@ -23,6 +24,9 @@ const AddPath = () => {
     if (name1 && name2) {
       setNames((name) => [...name, date]);
       setState({ name1: "", name2: "" });
+      setShow(false);
+    } else {
+      setShow(true);
     }
   };
 
@@ -36,10 +40,10 @@ const AddPath = () => {
 
   names.map((name) => (occur = occur + " " + name.name1 + " " + name.name2));
   demoarr = [occur.trim().split(" ")].shift();
-  console.log(demoarr);
+  // console.log(demoarr);
   data = removeDuplicates(demoarr);
-  console.log(data);
-  console.log(names);
+  // console.log(data);
+  // console.log(names);
 
   return (
     <div className="">
@@ -58,6 +62,11 @@ const AddPath = () => {
           <h1 className="font-semibold text-2xl capitalize mb-2.5">
             Add two names
           </h1>
+          {show && (
+            <h1 className="text-md font-semibold text-red-600 mb-2.5">
+              *PLease enter both the names
+            </h1>
+          )}
           <div className="flex  items-center">
             <TextField
               id="outlined-textarea"
