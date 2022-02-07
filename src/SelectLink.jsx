@@ -25,15 +25,18 @@ const SelectLink = ({ data, names }) => {
   };
 
   return (
-    <div className="=">
-      <Box sx={{ minWidth: 400 }}>
-        <FormControl>
-          <InputLabel id="demo-simple-select-label">Age</InputLabel>
+    <div className="flex flex-col items-center gap-5 mt-12">
+      <h1 className="font-semibold text-2xl capitalize">Let's find out</h1>
+      <div className="flex gap-5 items-center">
+        <h1 className="font-semibold text-xl">How is</h1>
+
+        <FormControl variant="filled" sx={{ minWidth: 200 }}>
+          <InputLabel id="demo-simple-select-label">Name</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={source}
-            label="Age"
+            label="Name"
             onChange={handleChangeSource}
           >
             {data.map((item, idx) => (
@@ -43,15 +46,16 @@ const SelectLink = ({ data, names }) => {
             ))}
           </Select>
         </FormControl>
-      </Box>
-      <Box sx={{ minWidth: 400 }}>
-        <FormControl>
-          <InputLabel id="demo-simple-select-label">Age</InputLabel>
+
+        <h1 className="font-semibold text-xl">linked to</h1>
+
+        <FormControl variant="filled" sx={{ minWidth: 200 }}>
+          <InputLabel id="demo-simple-select-label">Name</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={destination}
-            label="Age"
+            label="Name"
             onChange={handleChangeDestination}
           >
             {data.map((item, idx) => (
@@ -61,7 +65,8 @@ const SelectLink = ({ data, names }) => {
             ))}
           </Select>
         </FormControl>
-      </Box>
+        <h1 className="font-semibold text-xl">?</h1>
+      </div>
 
       <ShowLink
         source={source}

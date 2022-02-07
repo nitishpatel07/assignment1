@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import SelectLink from "./SelectLink";
@@ -51,29 +51,43 @@ const AddPath = () => {
         noValidate
         autoComplete="off"
       >
-        <div className="">
-          <TextField
-            id="outlined-textarea"
-            label="Name"
-            placeholder="Name"
-            name="name1"
-            type="text"
-            value={name1}
-            onChange={handleInputChange}
-          />
-          <TextField
-            id="outlined-textarea"
-            label="Name"
-            placeholder="Name"
-            name="name2"
-            type="text"
-            value={name2}
-            onChange={handleInputChange}
-          />
+        <div className="flex flex-col items-center mb-4">
+          <h1 className="font-bold text-yellow-900 text-3xl uppercase underline underline-offset-2 mb-10">
+            Welcome to link up!
+          </h1>
+          <h1 className="font-semibold text-2xl capitalize mb-2.5">
+            Add two names
+          </h1>
+          <div className="flex  items-center">
+            <TextField
+              id="outlined-textarea"
+              label="Name"
+              placeholder="Name"
+              name="name1"
+              type="text"
+              value={name1}
+              onChange={handleInputChange}
+            />
+            <h1 className="font-semibold text-2xl">∙∙∙∙∙∙∙∙∙</h1>
+            <TextField
+              id="outlined-textarea"
+              label="Name"
+              placeholder="Name"
+              name="name2"
+              type="text"
+              value={name2}
+              onChange={handleInputChange}
+            />
+          </div>
 
-          <button className="" onClick={handleSubmit}>
-            ADD CONNECTION
-          </button>
+          <div>
+            <button
+              className="bg-blue-500 hover:drop-shadow-lg hover:bg-blue-700 text-white font-bold py-1 px-2 rounded"
+              onClick={handleSubmit}
+            >
+              ADD CONNECTION
+            </button>
+          </div>
         </div>
       </Box>
       <SelectLink data={data} names={names} />

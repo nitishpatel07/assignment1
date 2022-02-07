@@ -51,7 +51,7 @@ const ShowLink = ({ source, destination, names, data }) => {
       const current = path[path.length - 1];
       console.log(current);
 
-      if (current == destinationIndex) {
+      if (current === destinationIndex) {
         res.push(path);
         console.log(res);
         continue;
@@ -75,15 +75,17 @@ const ShowLink = ({ source, destination, names, data }) => {
   console.log(results);
 
   return (
-    <div>
+    <div className="bg-yellow-200 mt-12 drop-shadow-md hover:drop-shadow-lg rounded-lg flex flex-col items-center px-6 py-3">
       {/* {results.map((result) => (
         <div>{result.map((char) => data[char] + ">")}</div>
       ))}
       <br /> */}
+
       {results.map((result) => (
-        <div>{result.map((char) => data[char]).join(" > ")}</div>
+        <div className="font-semibold text-2xl">
+          {result.map((char) => data[char]).join(" ∙∙∙∙∙∙ ")}
+        </div>
       ))}
-      <br />
     </div>
   );
 };
